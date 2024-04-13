@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DDL Commands - S4U</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    position: relative; /* Relative positioning for floating elements */
+  }
+  .header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .header h1 {
+    font-size: 72px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: blink 1s infinite alternate;
+  }
+  .header .site-name {
+    color: #ff7e00; /* Orange color */
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  .main-section {
+    text-align: center;
+    padding: 50px 0;
+    max-height: calc(100vh - 200px); /* Adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  .main-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-out;
+  }
+  .question {
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  .question h3 {
+    margin-bottom: 10px;
+  }
+  .question pre {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .footer p {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>S<span class="site-name">4U</span></h1>
+  </div>
+  <div class="main-section">
+    <h2>DDL Commands</h2>
+    <div class="question">
+      <h3>Certainly! Here's a question for each DDL command along with a brief explanation and solution:</h3>
+      <h4>CREATE</h4>
+      <p><strong>Question:</strong> Create a table named `Students` with columns for `student_id`, `first_name`, `last_name`, and `date_of_birth`.</p>
+      <p><strong>Solution:</strong></p>
+      <pre>CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    date_of_birth DATE
+);</pre>
+      <p><strong>Explanation:</strong> The CREATE command is used to define new database objects like tables, indexes, views, etc. In this example, a table named `Students` is created with specified columns. It's essential for setting up the structure of the database.</p>
+
+      <h4>ALTER</h4>
+      <p><strong>Question:</strong> Add a new column named `email` of type VARCHAR(100) to the `Students` table.</p>
+      <p><strong>Solution:</strong></p>
+      <pre>ALTER TABLE Students ADD COLUMN email VARCHAR(100);</pre>
+      <p><strong>Explanation:</strong> The ALTER command is used to modify the structure of existing database objects without dropping and recreating them. In this case, a new column `email` is added to the `Students` table, allowing for additional information to be stored.</p>
+
+      <h4>DROP</h4>
+      <p><strong>Question:</strong> Delete the `Students` table from the database.</p>
+      <p><strong>Solution:</strong></p>
+      <pre>DROP TABLE Students;</pre>
+      <p><strong>Explanation:</strong> The DROP command is used to delete existing database objects like tables, indexes, views, etc. In this example, the `Students` table is removed from the database. It's useful for cleaning up unused or unnecessary objects.</p>
+
+      <h4>TRUNCATE</h4>
+      <p><strong>Question:</strong> Truncate the `Sales` table to remove all records.</p>
+      <p><strong>Solution:</strong></p>
+      <pre>TRUNCATE TABLE Sales;</pre>
+      <p><strong>Explanation:</strong> The TRUNCATE command removes all rows from a table, effectively resetting it to an empty state. It's faster than DELETE because it deallocates data pages in one go, making it ideal for cleaning up large tables without keeping a log of individual row deletions.</p>
+
+      <h4>RENAME</h4>
+      <p><strong>Question:</strong> Rename the `Customers` table to `Clients`.</p>
+      <p><strong>Solution:</strong></p>
+      <pre>RENAME TABLE Customers TO Clients;</pre>
+      <p><strong>Explanation:</strong> The RENAME command is used to change the name of an existing database object, such as a table, view, or column. In this case, the `Customers` table is renamed to `Clients`. It's helpful for reorganizing database structure or providing more meaningful names to objects.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Your DBMS Learning Site</p>
+    <p>Sahil Tulani 4228/22</p>
+    <p>&copy; 2024 S4U. All rights reserved.</p>
+  </div>
+</body>
+</html>

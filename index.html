@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S4U</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    position: relative; /* Relative positioning for floating elements */
+  }
+  .header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .header h1 {
+    font-size: 72px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: blink 1s infinite alternate;
+  }
+  .header .site-name {
+    color: #ff7e00; /* Orange color */
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  .main-section {
+    text-align: center;
+    padding: 100px 0;
+  }
+  .main-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-out;
+  }
+  .main-section p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    animation: slideInUp 1s ease-out;
+  }
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .footer p {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+  }
+  .button-container {
+    margin-top: 30px;
+  }
+  .button-container button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7e00;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .button-container button:hover {
+    background-color: #ff9500;
+    transform: scale(1.05);
+  }
+  /* Floating elements */
+  .floating-element {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite alternate;
+    opacity: 0.6;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+  .floating-element-1 {
+    width: 20px;
+    height: 20px;
+    background-color: #ff7e00;
+    top: 50px;
+    left: 10%;
+  }
+  .floating-element-2 {
+    width: 30px;
+    height: 30px;
+    background-color: #ff7e00;
+    top: 150px;
+    left: 20%;
+  }
+  .floating-element-3 {
+    width: 40px;
+    height: 40px;
+    background-color: #ff7e00;
+    top: 300px;
+    left: 30%;
+  }
+  .floating-element-4 {
+    width: 20px;
+    height: 20px;
+    background-color: #ff7e00;
+    top: 100px;
+    right: 10%;
+  }
+  .floating-element-5 {
+    width: 30px;
+    height: 30px;
+    background-color: #ff7e00;
+    top: 200px;
+    right: 20%;
+  }
+  .floating-element-6 {
+    width: 40px;
+    height: 40px;
+    background-color: #ff7e00;
+    top: 350px;
+    right: 30%;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>S<span class="site-name">4U</span></h1>
+  </div>
+  <div class="main-section">
+    <h2>Let's Learn Together</h2>
+    <p>S4U</p>
+    <p>Your Database</p>
+    <div class="button-container">
+      <button onclick="location.href='ddl_page.html'">DDL</button>
+      <button onclick="location.href='dql_page.html'">DQL</button>
+      <button onclick="location.href='dml_page.html'">DML</button>
+      <button onclick="location.href='dcl_page.html'">DCL</button>
+      <button onclick="location.href='plsql_page.html'">PLSQL</button>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Your DBMS Learning Site</p>
+    <p>Sahil Tulani 4228/22</p>
+    <p>&copy; 2024 S4U. All rights reserved.</p>
+  </div>
+  <!-- Floating elements -->
+  <div class="floating-element floating-element-1"></div>
+  <div class="floating-element floating-element-2"></div>
+  <div class="floating-element floating-element-3"></div>
+  <div class="floating-element floating-element-4"></div>
+  <div class="floating-element floating-element-5"></div>
+  <div class="floating-element floating-element-6"></div>
+</body>
+</html>

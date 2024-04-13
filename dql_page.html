@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S4U Commands - S4U hi</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    position: relative; /* Relative positioning for floating elements */
+  }
+  .header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .header h1 {
+    font-size: 72px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: blink 1s infinite alternate;
+  }
+  .header .site-name {
+    color: #ff7e00; /* Orange color */
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  .main-section {
+    text-align: center;
+    padding: 50px 0;
+    max-height: calc(100vh - 200px); /* Adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  .main-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-out;
+  }
+  .command {
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  .command h3 {
+    margin-bottom: 10px;
+  }
+  .command pre {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .footer p {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>S<span class="site-name">4U </span></h1>
+  </div>
+  <div class="main-section">
+    <h2>DQL Commands</h2>
+    <div class="command">
+      <h3>Certainly! Here are the main commands of S4U (Study for you) in SQL:</h3>
+      <ol>
+        <li><strong>SELECT</strong>: Retrieves data from one or more tables based on specified columns and conditions.<br><strong>Example:</strong><br><pre>SELECT column1, column2 FROM table_name WHERE condition;</pre></li>
+        <li><strong>FROM</strong>: Specifies the tables from which to retrieve data.<br><strong>Example:</strong><br><pre>SELECT column1, column2 FROM table_name;</pre></li>
+        <li><strong>WHERE</strong>: Filters data based on specified conditions.<br><strong>Example:</strong><br><pre>SELECT column1, column2 FROM table_name WHERE condition;</pre></li>
+        <li><strong>GROUP BY</strong>: Groups rows that have the same values into summary rows.<br><strong>Example:</strong><br><pre>SELECT column1, COUNT(*) FROM table_name GROUP BY column1;</pre></li>
+        <li><strong>HAVING</strong>: Filters groups based on specified conditions.<br><strong>Example:</strong><br><pre>SELECT column1, COUNT(*) FROM table_name GROUP BY column1 HAVING COUNT(*) > 1;</pre></li>
+        <li><strong>ORDER BY</strong>: Sorts the result set based on specified columns and sort order.<br><strong>Example:</strong><br><pre>SELECT column1, column2 FROM table_name ORDER BY column1 ASC;</pre></li>
+        <li><strong>DISTINCT</strong>: Returns unique values from a specified column in the result set.<br><strong>Example:</strong><br><pre>SELECT DISTINCT column1 FROM table_name;</pre></li>
+      </ol>
+      <p>These are the primary commands used in S4U (Study for you) SQL for querying and retrieving data from a database.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Your DBMS Learning Site</p>
+    <p>Sahil Tulani 4228/22</p>
+    <p>&copy; 2024 S4U. All rights reserved.</p>
+  </div>
+</body>
+</html>
